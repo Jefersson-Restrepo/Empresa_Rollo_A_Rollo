@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rollo a Rollo | Identificación, Insumos y Marcación</title>
+    <link rel="stylesheet" href="Stylo_Css/Styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado Principal y Barra de Navegación -->
+    <header class="barra-navegacion">
+      <a href="#inicio" class="enlace-logo">
+        <figure class="marca">
+          <img
+            src="Imagenes/IMG-20261026-WA0030.jpg"
+            alt="Adhesivos Rollo a Rollo"
+            class="logo-principal"
+          />
+        </figure>
+      </a>
+
+      <nav class="menu-principal">
+        <a href="Index.html" class="item-menu">Inicio</a>
+        <a href="Nosotros.html" class="item-menu">Nosotros</a>
+        <a href="Servicios.html" class="item-menu">Servicios</a>
+        <a href="Insumos.html" class="item-menu">Insumos</a>
+        <a href="Contacto.html" class="boton-destacado">Cotizar en Línea</a>
+      </nav>
+    </header>
+
+    <!-- Contenido Central -->
+    <main>
+      <!-- Banner Principal -->
+      <section id="inicio" class="banner-hero">
+        <h1 class="titulo-principal">
+          Soluciones Integrales de Identificación y Etiquetado
+        </h1>
+        <p class="eslogan-marca">
+          Rollo a Rollo: Tecnología que identifica, soluciones que transforman.
+        </p>
+        <nav class="acciones-hero">
+          <a href="#insumos" class="boton boton-primario"
+            >Ver Catálogo de Insumos</a
+          >
+          <a href="#servicios" class="boton boton-secundario"
+            >Mantenimiento de Impresoras</a
+          >
+        </nav>
+      </section>
+
+      <!-- Sección de Servicios Técnicos -->
+      <section id="servicios" class="seccion-servicios">
+        <h2 class="subtitulo-seccion">Servicio Técnico Especializado</h2>
+        <section class="rejilla-servicios">
+          <article class="tarjeta-servicio">
+            <span class="icono-servicio">🖨️</span>
+            <h3>Línea Térmica e Industrial</h3>
+            <p>
+              Venta, calibración y soporte preventivo/correctivo para impresoras
+              térmicas de código de barras (TSC, Zebra).
+            </p>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <span class="icono-servicio">🎨</span>
+            <h3>Línea Multifuncional Color</h3>
+            <p>
+              Mantenimiento correctivo y preventivo de impresoras a color de
+              alta exigencia (Epson, Ricoh).
+            </p>
+          </article>
+        </section>
+      </section>
+
+      <!-- Catálogo de Insumos y Medidas -->
+      <section id="insumos" class="seccion-insumos">
+        <h2 class="subtitulo-seccion">Insumos y Etiquetas Adhesivas</h2>
+
+        <!-- Barra de Filtros Semántica -->
+        <form class="control-filtros">
+          <label for="filtroMaterial">Filtrar por material:</label>
+          <select id="filtroMaterial" onchange="window.filtrarProductos()">
+            <option value="todos">Todos los materiales</option>
+            <option value="polipropileno">Polipropileno brillante</option>
+            <option value="litografico">Papel Litográfico</option>
+            <option value="textil">Nylon / Cinta Textil (Lavado)</option>
+            <option value="cera">Cinta Ribbon Cera</option>
+          </select>
+        </form>
+
+        <!-- Rejilla dinámica donde se insertan los <article> desde JS -->
+        <section id="contenedorProductos" class="rejilla-productos"></section>
+      </section>
+      
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="pie-pagina">
+      <p>&copy; 2026 Rollo a Rollo. Todos los derechos reservados.</p>
+      <p class="marcas-aliadas">Marcas aliadas: Zebra | TSC | Epson | Ricoh</p>
+    </footer>
+    <script src="Archivos_java/models.js"></script>
+    <script src="Archivos_java/GuardarInformacion.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración de Insumo | Rollo a Rollo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="barra-navegacion">
+    <a href="index.html" class="enlace-logo">
+      <figure class="marca">
+        <img src="assets/img/logo-rollo-a-rollo.png" alt="Adhesivos Rollo a Rollo" class="logo-principal">
+      </figure>
+    </a>
+    <nav class="menu-principal">
+      <a href="index.html" class="item-menu">Inicio</a>
+      <a href="nosotros.html" class="item-menu">Nosotros</a>
+      <a href="servicios.html" class="item-menu">Servicios</a>
+      <a href="insumos.html" class="item-menu activo">Insumos</a>
+      <a href="contacto.html" class="boton-destacado">Cotizar en Línea</a>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <article class="ficha-tecnica">
+      <h1>Rollo Adhesivo Blanco - Medida 32 x 25 mm</h1>
+      <p class="descripcion-producto">Seleccione el tipo de material y tecnología según su impresora:</p>
+
+      <form class="formulario-seleccion">
+        
+        <label for="tipoMaterial"><strong>1. Tipo de Impresión / Material:</strong></label>
+        <select id="tipoMaterial">
+          <option value="termico_directo">Térmico Directo (No requiere Ribbon)</option>
+          <option value="transferencia_termica">Transferencia Térmica / Papel Lito (Requiere Ribbon Cera)</option>
+          <option value="polipropileno">Polipropileno / Plástica (Requiere Ribbon Resina)</option>
+        </select>
+
+        <label for="cantidadRollos" style="margin-top: 1rem; display: block;"><strong>2. Cantidad de Rollos:</strong></label>
+        <input type="number" id="cantidadRollos" min="1" value="5">
+
+        <button type="button" class="boton boton-primario" style="margin-top: 1.5rem;" onclick="agregarACotizacion()">
+          Agregar a Cotización
+        </button>
+
+      </form>
+    </article>
+  </main>
+
+  <footer class="pie-pagina">
+    <p>&copy; 2026 Rollo a Rollo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/models.js"></script>
+  <script src="js/guardarInformacion.js"></script>
+</body>
+</html>

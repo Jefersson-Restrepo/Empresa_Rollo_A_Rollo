@@ -1,0 +1,218 @@
+:root {
+  --color-primary: #9BC53D;        /* Verde del rollo de etiquetas */
+  --color-primary-dark: #7FA52D;
+  --color-dark: #1E1E1E;           /* Negro carbón */
+  --color-bg-light: #F4F6F8;
+  --color-white: #FFFFFF;
+  --font-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Reset y caja */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-dark);
+  background-color: var(--color-bg-light);
+  line-height: 1.6;
+}
+
+/* 1. Header con Sticky y Flexbox (el logo no baila ni se desubica) */
+.barra-navegacion {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--color-primary);
+  padding: 0.8rem 5%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.enlace-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.marca {
+  margin: 0;
+}
+
+.logo-principal {
+  height: 52px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 2. Menú de Navegación */
+.menu-principal {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.item-menu {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.item-menu:hover {
+  color: var(--color-primary-dark);
+}
+
+.boton-destacado {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.2s;
+}
+
+.boton-destacado:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* 3. Hero Section */
+.banner-hero {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 4.5rem 1.5rem;
+}
+
+.titulo-principal {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.eslogan-marca {
+  color: var(--color-primary);
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+}
+
+.acciones-hero {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.boton {
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.boton-primario {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+}
+
+.boton-secundario {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+/* 4. Estructura de Secciones y Rejillas (Grids) */
+.seccion-servicios,
+.seccion-insumos,
+.seccion-nosotros {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.subtitulo-seccion {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.rejilla-servicios,
+.rejilla-productos,
+.seccion-nosotros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjetas individuales (<article>) */
+.tarjeta-servicio,
+.tarjeta-producto,
+.tarjeta-nosotros {
+  background-color: var(--color-white);
+  padding: 1.8rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-top: 3px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta-servicio:hover,
+.tarjeta-producto:hover {
+  transform: translateY(-4px);
+  border-top-color: var(--color-primary);
+}
+
+.icono-servicio {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+/* Pastillas de medidas */
+.etiqueta-medida {
+  display: inline-block;
+  background-color: #EEF7D9;
+  color: #436011;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 3px;
+  margin: 0.2rem;
+}
+
+/* Controles de Formulario */
+.control-filtros {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.control-filtros select {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+}
+
+/* Footer */
+.pie-pagina {
+  background-color: var(--color-dark);
+  color: #888;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 4rem;
+}
+
+.marcas-aliadas {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #BBB;
+}
