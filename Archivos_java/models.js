@@ -18,6 +18,7 @@ const dataSchema = {
       nombre: "Etiqueta Polipropileno",
       tipo: "Insumo",
       material: "Polipropileno brillante",
+      descripcion: "Resistente a la fricción y humedad. Ideal para códigos de barras duraderos.",
       medidasDisponibles: ["32x25", "100x50", "100x100", "100x150", "100x200", "64x25"],
       aplicacion: "Precios y marcación textil"
     },
@@ -26,6 +27,7 @@ const dataSchema = {
       nombre: "Nylon / Cinta Textil",
       tipo: "Insumo",
       material: "Nylon",
+      descripcion: "Especial para instrucciones de lavado y costura en prendas de vestir.",
       medidasDisponibles: ["30mm", "35mm", "40mm"],
       aplicacion: "Instrucciones de lavado"
     }
