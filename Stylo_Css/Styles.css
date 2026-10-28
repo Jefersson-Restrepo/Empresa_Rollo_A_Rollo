@@ -216,3 +216,120 @@ body {
   font-weight: 500;
   color: #BBB;
 }
+
+
+/* =========================================================
+   REGLAS DE RESPONSIVIDAD (MOBILE-FIRST / ADAPTACIÓN MÓVIL)
+   ========================================================= */
+
+/* Tablets y celulares en orientación horizontal / vertical */
+@media (max-width: 768px) {
+  /* 1. Encabezado y Navegación */
+  .barra-navegacion {
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+    position: static; /* Evita que ocupe media pantalla en móviles */
+  }
+
+  .marca .logo-principal {
+    max-height: 48px;
+  }
+
+  .menu-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .menu-principal .item-menu,
+  .menu-principal .boton-destacado {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    text-align: center;
+  }
+
+  /* 2. Banner Principal (Hero) */
+  .banner-hero {
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+
+  .banner-hero .titulo-principal {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .banner-hero .eslogan-marca {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .acciones-hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .acciones-hero .boton {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* 3. Rejilla de Servicios y Productos a 1 Columna */
+  .rejilla-servicios,
+  .rejilla-productos,
+  .rejilla-confianza,
+  .seccion-mision-vision {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 0 1rem;
+  }
+
+  .tarjeta-servicio,
+  .tarjeta-producto,
+  .tarjeta-nosotros,
+  .item-confianza {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* 4. Filtro de Insumos */
+  .control-filtros {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+
+  .control-filtros select {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Celulares pequeños (menos de 480px) */
+@media (max-width: 480px) {
+  .banner-hero .titulo-principal {
+    font-size: 1.35rem;
+  }
+
+  .subtitulo-seccion {
+    font-size: 1.3rem;
+  }
+
+  .etiqueta-medida {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
