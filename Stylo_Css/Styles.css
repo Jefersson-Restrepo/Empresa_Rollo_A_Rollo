@@ -52,15 +52,15 @@ body {
   align-items: center;
 }
 
-/* Logo de mayor tamaño y realce de bordes */
+
+/* Logo con mayor presencia en la esquina izquierda */
 .logo-principal {
-  height: 75px;
-  max-height: 85px;
+  height: 85px;         /* Aumentado para que destaque aún más */
+  max-height: 95px;
   width: auto;
   display: block;
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  transition: transform 0.25s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
 }
 
 .logo-principal:hover {
@@ -109,41 +109,37 @@ body {
 /* =========================================================
    3. HERO SECTION (VERDE INDUSTRIAL ELEGANTE)
    ========================================================= */
+/* Banner Hero más compacto y estilizado */
 .banner-hero {
   background: linear-gradient(135deg, #102613 0%, #1e4522 100%);
   color: var(--color-white);
   text-align: center;
-  padding: 5rem 1.5rem;
+  padding: 2.6rem 1.5rem; /* Se redujo el relleno vertical para que no ocupe tanta pantalla */
 }
 
 .titulo-principal {
-  font-size: 2.5rem;
+  font-size: 2rem;        /* Tamaño más proporcionado */
   font-weight: 800;
-  margin-bottom: 0.8rem;
-  letter-spacing: -0.5px;
+  margin-bottom: 0.4rem;
 }
 
 .eslogan-marca {
   color: var(--color-primary-light);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;   /* Espacio controlado antes de los botones */
 }
 
+/* Botones más proporcionados */
 .acciones-hero {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .boton {
-  padding: 0.85rem 1.8rem;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 6px;
-  display: inline-block;
-  transition: all 0.2s ease;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.95rem;
 }
 
 .boton-primario {
@@ -177,9 +173,9 @@ body {
 .seccion-nosotros,
 .franja-confianza {
   max-width: 1200px;
-  margin: 3.5rem auto;
+  margin: 2rem auto 3.5rem auto; /* 2rem arriba para que quede más cerca */
   padding: 0 1.5rem;
-}
+} 
 
 .subtitulo-seccion {
   text-align: center;
