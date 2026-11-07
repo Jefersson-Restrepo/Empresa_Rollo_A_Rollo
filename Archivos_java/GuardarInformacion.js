@@ -50,8 +50,26 @@ window.filtrarProductos = function() {
 };
 
 // Carga inicial
-document.addEventListener("DOMContentLoaded", () => {
-  inicializarStorage();
-  const catalogo = JSON.parse(localStorage.getItem("rollo_catalogo")) || dataSchema.productos;
-  renderizarProductos(catalogo);
-});
+const video = document.getElementById('video-boomerang');
+
+if (video) {
+  let retrocediendo = false;
+  let intervaloRetroceso = null;
+
+  // 1. Cuando llega al final, activamos el rebobinado suave
+  video.addEventListener('ended', () => {
+    retrocediendo = true;
+    intervaloRetroceso = setInterval(() => {
+      // Va retrocediendo de a 0.06 segundos
+      if (video.currentTime > 0.08) {
+        video.currentTime -= 0.06;
+      } else {
+        // Al llegar al inicio, vuelve a arrancar hacia adelante
+        clearInterval(intervaloRetroceso);
+        retrocediendo = false;
+        video.currentTime = 0;
+        video.play();
+      }
+    }, 33); // Aproximadamente 30 cuadros por segundo
+  });
+}

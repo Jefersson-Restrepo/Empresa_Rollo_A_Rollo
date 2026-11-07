@@ -414,3 +414,207 @@ article[id] {
     animation: latido 1.5s infinite ease-in-out;
     transition: transform 0.3s ease;
 }
+
+/* =========================================================
+   BANNER HERO CON CSS GRID (TEXTO A LA IZQUIERDA, VIDEO A LA DERECHA)
+   ========================================================= */
+.banner-hero {
+  background: linear-gradient(135deg, #102613 0%, #1e4522 100%);
+  color: var(--color-white);
+  padding: 2.2rem 5%;
+  display: grid;
+  /* Columna izquierda flexible para el texto, columna derecha de 260px fija para el video */
+  grid-template-columns: 1fr 260px;
+  grid-template-areas:
+    "titulo video"
+    "eslogan video"
+    "botones video";
+  align-items: center;
+  column-gap: 3rem;
+  row-gap: 0.6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Asignación de áreas semánticas */
+.titulo-principal {
+  grid-area: titulo;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0;
+}
+
+.eslogan-marca {
+  grid-area: eslogan;
+  color: var(--color-primary-light);
+  font-size: 1.05rem;
+  text-align: left;
+  margin: 0;
+}
+
+.acciones-hero {
+  grid-area: botones;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+/* Caja de Video compacta en la columna derecha */
+.caja-video-intro {
+  grid-area: video;
+  width: 100%;
+  height: 200px; /* Altura controlada para que no deforme la franja */
+  background: #08120a;
+  border: 2px solid rgba(142, 198, 63, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.caja-video-intro video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================================
+   ADAPTACIÓN PARA CELULARES (VUELVE A 1 COLUMNA EN MÓVIL)
+   ========================================================= */
+@media (max-width: 768px) {
+  .banner-hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "eslogan"
+      "botones"
+      "video";
+    text-align: center;
+    row-gap: 1.2rem;
+    padding: 2.5rem 1.2rem;
+  }
+
+  .titulo-principal,
+  .eslogan-marca {
+    text-align: center;
+  }
+
+  .acciones-hero {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .caja-video-intro {
+    max-width: 240px;
+    height: 170px;
+    margin: 0.5rem auto 0 auto;
+  }
+}
+
+/* Posicionamiento del contenedor desplegable */
+.menu-desplegable {
+  position: relative;
+  display: inline-block;
+}
+
+/* Submenú oculto por defecto */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-top: 3px solid var(--color-primary, #8ec63f);
+  border-radius: 0 0 8px 8px;
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+/* Enlaces internos del submenú */
+.submenu a {
+  color: #1a1a1a;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submenu a:hover {
+  background-color: #f4f8f0;
+  color: #1e4522;
+  font-weight: 600;
+}
+
+/* Mostrar al hacer hover */
+.menu-desplegable:hover .submenu {
+  display: block;
+}
+
+-----------------------------------------------------------------------------------------------
+/* segunda pagina de insumos */
+.seccion-medidas-insumos {
+  max-width: 950px;
+  margin: 2rem auto 3.5rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.encabezado-seccion .descripcion-seccion {
+  max-width: 700px;
+  margin: 0.5rem auto 1.8rem auto;
+  color: #4a4a4a;
+  font-size: 1.05rem;
+}
+
+.cuadro-infografia-medidas {
+  margin: 0 auto 2rem auto;
+  max-width: 680px;
+  background-color: #0b1a0e;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid rgba(142, 198, 63, 0.4);
+}
+
+.imagen-medidas-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.pie-infografia {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #cfdfc4;
+}
+
+.acciones-medidas {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Desplazamiento suave al dar clic en el ancla */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Espacio superior para que la barra de navegación fija no tape el título de la sección */
+.seccion-medidas-insumos {
+  scroll-margin-top: 100px;
+}

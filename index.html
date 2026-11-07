@@ -10,20 +10,29 @@
     <!-- Encabezado Principal y Barra de Navegación -->
     <header class="barra-navegacion">
       <a href="index.html" class="enlace-logo">
-  <figure class="marca">
-    <img
-      src="Imagenes/Rollo_Rollo.png"
-      alt="Adhesivos Rollo a Rollo"
-      class="logo-principal"
-    />
-  </figure>
-</a>
+        <figure class="marca">
+          <img
+            src="Imagenes/Rollo_Rollo.png"
+            alt="Adhesivos Rollo a Rollo"
+            class="logo-principal"
+          />
+        </figure>
+      </a>
       <nav class="menu-principal">
-        <a href="Index.html" class="item-menu">Inicio</a>
+        <a href="index.html" class="item-menu">Inicio</a>
         <a href="Nosotros.html" class="item-menu">Nosotros</a>
         <a href="Servicios.html" class="item-menu">Servicios</a>
-        <a href="Insumos.html" class="item-menu">Insumos</a>
-        <a href="Contacto.html" class="boton-destacado">Cotizar en Línea</a>
+        <!-- Desplegable Insumos -->
+  <span class="menu-desplegable">
+    <a href="Insumos.html" class="item-menu enlace-padre">Insumos ▾</a>
+    <nav class="submenu">
+      <a href="Insumos.html#adhesivas">Etiquetas y Medidas</a>
+      <a href="Insumos.html#cintas">Cintas Ribbon</a>
+      <a href="Insumos.html#textil">Nylon / Textil</a>
+    </nav>
+  </span>
+
+  <a href="Contacto.html" class="boton-destacado">Cotizar en Línea</a>
       </nav>
     </header>
 
@@ -45,6 +54,12 @@
             >Mantenimiento de Impresoras</a
           >
         </nav>
+        <!-- Video directamente en figure sin envoltorios extra -->
+        <figure class="caja-video-intro">
+          <video id="video-boomerang" autoplay muted playsinline loop>
+            <source src="videos/video_rollo_a_rollo.mp4" type="video/mp4" />
+          </video>
+        </figure>
       </section>
 
       <!-- Sección de Servicios Técnicos -->
@@ -90,7 +105,6 @@
         <!-- Rejilla dinámica donde se insertan los <article> desde JS -->
         <section id="contenedorProductos" class="rejilla-productos"></section>
       </section>
-      
     </main>
     <aside class="posicion-whatsapp">
       <a

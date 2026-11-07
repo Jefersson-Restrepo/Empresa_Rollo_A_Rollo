@@ -1,20 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insumos | Rollo a Rollo</title>
-</head>
-<body>
-    
-</body>
-</html>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insumos y Medidas de Etiquetas | Rollo a Rollo</title>
+    <link rel="stylesheet" href="Stylo_Css/Styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado con la barra de navegación -->
+    <header class="barra-navegacion">
+      <a href="index.html" class="enlace-logo">
+        <figure class="marca">
+          <img src="Imagenes/Rollo_Rollo.png" alt="Adhesivos Rollo a Rollo" class="logo-principal" />
+        </figure>
+      </a>
+      <nav class="menu-principal">
+        <a href="index.html" class="item-menu">Inicio</a>
+        <a href="Nosotros.html" class="item-menu">Nosotros</a>
+        <a href="Servicios.html" class="item-menu">Servicios</a>
+        <span class="menu-desplegable">
+          <a href="Insumos.html" class="item-menu enlace-padre">Insumos ▾</a>
+          <nav class="submenu">
+            <a href="Insumos.html#adhesivas">Etiquetas y Medidas</a>
+            <a href="Insumos.html#cintas">Cintas Ribbon</a>
+            <a href="Insumos.html#textil">Nylon / Textil</a>
+          </nav>
+        </span>
+        <a href="Contacto.html" class="boton-destacado">Cotizar en Línea</a>
+      </nav>
+    </header>
 
-<article class="tarjeta-producto">
-  <h3>Rollo Blanco 32 x 25</h3>
-  <p>Etiqueta estándar para marcación textil y logística.</p>
-  <!-- Envía el identificador del producto a la página de detalle -->
-  <a href="detalle-producto.html?prod=rollo-32x25" class="boton boton-primario">
-    Ver Opciones y Referencias
-  </a>
-</article>
+    <main>
+      <!-- 1. SECCIÓN ETIQUETAS ADHESIVAS Y MEDIDAS (Enlace #adhesivas) -->
+      <section id="adhesivas" class="seccion-medidas-insumos">
+        <header class="encabezado-seccion">
+          <h1 class="subtitulo-seccion">Catálogo de Medidas y Materiales</h1>
+          <p class="descripcion-seccion">
+            Selecciona el tamaño estándar o solicita tu rollo con medidas personalizadas en transferencia térmica (TT), térmico directo o polipropileno brillante (PPB).
+          </p>
+        </header>
+
+        <!-- Infografía técnica concéntrica -->
+        <figure class="cuadro-infografia-medidas">
+          <img 
+            src="Imagenes/Medidas_rollo_rollo.jpg" 
+            alt="Guía técnica de medidas de etiquetas adhesivas por material"
+            class="imagen-medidas-responsive"
+          />
+          <figcaption class="pie-infografia">
+            Formatos disponibles a 1, 2, 3 y 4 columnas según la referencia de tu impresora térmica.
+          </figcaption>
+        </figure>
+
+        <nav class="acciones-medidas">
+          <a href="https://wa.me/573005986857?text=Hola,%20quisiera%20cotizar%20etiquetas%20adhesivas" class="boton boton-primario" target="_blank" rel="noopener noreferrer">Cotizar Medida por WhatsApp</a>
+          <a href="Servicios.html" class="boton boton-secundario">Ver Impresoras Compatibles</a>
+        </nav>
+      </section>
+
+      <!-- 2. AQUÍ COLOCAS EL CÓDIGO DE CINTAS RIBBON (Enlace #cintas) -->
+      <section id="cintas" class="seccion-medidas-insumos">
+        <header class="encabezado-seccion">
+          <h2 class="subtitulo-seccion">Cintas Ribbon de Transferencia Térmica</h2>
+          <p class="descripcion-seccion">
+            Rollos de cinta de impresión para código de barras y rotulado de alta fijación.
+          </p>
+        </header>
+
+        <section class="rejilla-servicios">
+          <article class="tarjeta-servicio">
+            <span class="icono-servicio">⬛</span>
+            <h3>Ribbon Cera Estándar</h3>
+            <p>Ideal para papel litográfico y etiquetas de transferencia térmica estándar (110 mm x 74 m / 110 mm x 300 m).</p>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <span class="icono-servicio">🛡️</span>
+            <h3>Ribbon Resina / Mixto</h3>
+            <p>Máxima adherencia frente a fricción, humedad y químicos. Compatible con polipropileno (PPB) y nylon textil.</p>
+          </article>
+        </section>
+      </section>
+
+      <!-- 3. AQUÍ COLOCAS EL CÓDIGO DE NYLON / TEXTIL (Enlace #textil) -->
+      <section id="textil" class="seccion-medidas-insumos">
+        <header class="encabezado-seccion">
+          <h2 class="subtitulo-seccion">Cintas y Rollos de Nylon Textil</h2>
+          <p class="descripcion-seccion">
+            Insumos textiles resistentes a procesos de lavado industrial, tintorería y planchado.
+          </p>
+        </header>
+
+        <section class="rejilla-servicios">
+          <article class="tarjeta-servicio">
+            <span class="icono-servicio">🏷️</span>
+            <h3>Nylon Rasgado y Cosido</h3>
+            <p>Rollos en anchos estándar de 25 mm, 30 mm y 35 mm, aptos para marquillas en confección.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <!-- Botón flotante de WhatsApp -->
+    <aside class="posicion-whatsapp">
+      <a
+        href="https://wa.me/573005986857?text=Hola,%20quisiera%20mas%20informacion"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="Imagenes/imagen_whast.png"
+          alt="Contacto vía WhatsApp"
+          class="whatsapp-imagen"
+        />
+      </a>
+    </aside>
+
+    <!-- Pie de Página -->
+    <footer class="pie-pagina">
+      <p>&copy; 2026 Rollo a Rollo. Todos los derechos reservados.</p>
+      <p class="marcas-aliadas">Marcas aliadas: Zebra | TSC | Epson | Ricoh</p>
+    </footer>
+  </body>
+</html>
